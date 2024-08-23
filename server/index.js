@@ -5,10 +5,10 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const connect = require('./config/db');
+const connect = require('./config');
 connect();
 
-app.use('/', require('./routes/upload'));
+app.use('/', require('./routes/uploadDataRoutes'));
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
