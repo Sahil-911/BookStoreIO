@@ -86,6 +86,7 @@ function FileInput() {
           });
 
           setData(validatedData);
+          setFinalData(validatedData.filter((row) => row.validation === "Valid"));
           setError(null);
         } catch (err) {
           setError(
@@ -130,9 +131,8 @@ function FileInput() {
       }
 
       const result = await response.json();
-      setFinalData(validData);
       console.log("Data submitted successfully:", result);
-
+      setFinalData(null);
       return result;
     } catch (error) {
       console.error("Error submitting data:", error);
@@ -144,14 +144,15 @@ function FileInput() {
     <div>
       <input type="file" onChange={handleFileUpload} />
       {error && <p style={{ color: "red" }}>{error}</p>}
-      {data && !finalData && (
+      {finalData && (
         <div>
-          <h2>Imported Data:</h2>
-          <pre>{JSON.stringify(data, null, 2)}</pre>
+          <h2>This is the data you have uploaded:</h2>
+          {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
+          {finalData && <TableView data={finalData} />}
           <button onClick={handleSubmit}>Submit Data</button>
         </div>
       )}
-      {finalData && <TableView data={finalData} />}
+      {/* {finalData && <TableView data={finalData} />} */}
     </div>
   );
 }
