@@ -117,7 +117,7 @@ function FileInput() {
 
   const submitData = async (validData) => {
     try {
-      const response = await fetch("http://localhost:3000/upload", {
+      const response = await fetch("https://bookstoreio.onrender.com/upload", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
