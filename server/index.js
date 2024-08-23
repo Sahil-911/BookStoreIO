@@ -7,10 +7,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 dotenv.config();
 
-app.use(cors({
-    origin: '*',
-    credentials: true
-}))
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.json({ limit: '3mb' }));
