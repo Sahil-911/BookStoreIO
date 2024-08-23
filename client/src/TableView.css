@@ -1,0 +1,41 @@
+.table-container {
+    max-width: 195vh;
+    max-height: 700px; /* Set the desired height */
+    overflow: auto; /* Enables scrolling for both directions */
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin: 30px;
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-table th, .data-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .data-table th {
+    background-color: gray;
+    position: sticky;
+    top: 0; /* Keep headers visible while scrolling */
+    z-index: 1;
+  }
+  
+  .data-table tr:nth-child(even) {
+    background-color: gray;
+  }
+
+  .data-table tr:nth-child(odd) {
+    background-color: #242424;
+  }
+  
+  .data-table tr:hover {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  
