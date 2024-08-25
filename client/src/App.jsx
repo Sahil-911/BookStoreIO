@@ -48,7 +48,7 @@ function App() {
           </Typography>
           <Typography variant="body2">
             6. The sixth column should contain the <strong>Date of Birth</strong>. 
-            The date must be in the format `DD-MM-YYYY`, e.g., 2003-11-12.
+            The date must be in the format `DD-MM-YYYY`, e.g., 15-09-2004.
           </Typography>
         </Box>
 
