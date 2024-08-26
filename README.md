@@ -1,4 +1,3 @@
-```markdown
 # Bookstore App
 
 A web application for uploading and managing book data using Excel files.
@@ -17,6 +16,8 @@ A web application for uploading and managing book data using Excel files.
 ## Setup and Installation
 
 ### Client
+
+The client is deployed and can be accessed at: [BookStoreIO](https://book-store-io.vercel.app/)
 
 1. Navigate to the `client` directory:
 
@@ -37,6 +38,8 @@ A web application for uploading and managing book data using Excel files.
    ```
 
 ### Server
+
+
 
 1. Navigate to the `server` directory:
 
@@ -59,3 +62,4 @@ A web application for uploading and managing book data using Excel files.
 ## API Endpoints
 
 - **POST** `/upload`: Upload Excel file and process data.
+- please wait for the server to start for a minute as I have deployed it on render. (Your free instance will spin down with inactivity, which can delay requests by 50 seconds or more.)
